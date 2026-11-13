@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Isi Absen - Mushola</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cloudflare.com">
+</head>
+<body>
+
+    <div class="app-container">
+        <!-- Header Ringkas -->
+        <header class="main-header" style="padding-bottom: 28px;">
+            <h2 class="sub-title">Mushola</h2>
+            <h1 class="main-title" style="font-size: 20px;">FORMULIR ABSENSI SISWA</h1>
+            <p class="badge-title">Presensi Kehadiran Ibadah di Mushola</p>
+        </header>
+
+        <!-- Menu Navigasi -->
+        <nav class="nav-menu">
+            <a href="index.html" class="nav-item"><i class="fa-solid fa-chart-pie"></i> Rekap</a>
+            <a href="form.html" class="nav-item active"><i class="fa-solid fa-user-check"></i> Isi Absen</a>
+            <a href="index.html#jadwal" class="nav-item"><i class="fa-solid fa-clock"></i> Jadwal</a>
+        </nav>
+
+        <!-- Konten Form -->
+        <main class="main-content">
+
+            <section class="section-block shadow-box">
+                <div class="form-header">
+                    <i class="fa-solid fa-clipboard-user text-primary"></i>
+                    <h3>Data Kehadiran Siswa</h3>
+                </div>
+                
+                <div class="form-group">
+                    <div class="input-box">
+                        <label>Nama Lengkap Siswa</label>
+                        <input id="namaSiswa" type="text" placeholder="Masukkan nama lengkap Anda">
+                    </div>
+
+                    <div class="input-box">
+                        <label>Jurusan & Kelas</label>
+                        <select id="kelasSiswa">
+                            <option value="">-- Pilih Kelas --</option>
+                            <option value="X RPL 1">X RPL 1</option>
+                            <option value="X RPL 2">X RPL 2</option>
+                            <option value="X RPL 3">X RPL 3</option>
+                            <option value="X MPLB">X MPLB</option>
+                            <option value="X AKL">X AKL</option>
+                            <option value="X TSM 1">X TSM 1</option>
+                            <option value="X TSM 2">X TSM 2</option>
+                            <option value="XI RPL 1">XI RPL 1</option>
+                            <option value="XI RPL 2">XI RPL 2</option>
+                            <option value="XI AKL">XI AKL</option>
+                            <option value="XI MPLB">XI MPLB</option>
+                            <option value="XI TSM 1">XI TSM 1</option>
+                            <option value="XI TSM 2">XI TSM 2</option>
+                            <option value="XII RPL 1">XII RPL 1</option>
+                            <option value="XII RPL 2">XII RPL 2</option>
+                            <option value="XII MPLB">XII MPLB</option>
+                            <option value="XII TSM 1">XII TSM 1</option>
+                            <option value="XII TSM 2"> XII TSM 2</option>
+                        </select>
+                    </div>
+
+                    <div class="input-box">
+                        <label>Jenis Sholat</label>
+                        <select id="jenisSholat">
+                            <option value="">-- Pilih Waktu Sholat --</option>
+                            <option value="Sholat Dzuhur">Sholat Dzuhur Berjamaah</option>
+                            <option value="Sholat Dhuha">Sholat Dhuha Bersama</option>
+                        </select>
+                    </div>
+
+                    <div class="input-box">
+                        <label>Keterangan Kehadiran</label>
+                        <select id="statusHadir">
+                            <option value="Hadir Tepat Waktu">Hadir Tepat Waktu (Jamaah)</option>
+                            <option value="Masbuk">Hadir (Masbuk)</option>
+                            <option value="Udzur Syar'i">Berhalangan / Udzur (Khusus Siswi)</option>
+                        </select>
+                    </div>
+
+                    <button id="btnKirimAbsen" class="btn btn-primary">
+                        <i class="fa-solid fa-paper-plane"></i> Kirim Absensi Sekarang
+                    </button>
+                </div>
+
+                <div class="info-box">
+                    <i class="fa-solid fa-circle-info text-primary"></i>
+                    <p>Waktu absen akan tercatat otomatis sesuai jam HP saat tombol kirim ditekan.</p>
+                </div>
+            </section>
+
+            <a href="index.html" class="btn btn-outline" style="display: block; text-align: center; text-decoration: none;">
+                <i class="fa-solid fa-arrow-left"></i> Lihat Rekap Kehadiran
+            </a>
+
+        </main>
+
+        <!-- Footer -->
+        <footer class="app-footer">
+            <p>© 2026 Pengurus Mushola Al-Ikhlas & Rohis.</p>
+            <p class="footer-highlight">SMK Swasta Prama Artha - Project Kelompok 5</p>
+        </footer>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

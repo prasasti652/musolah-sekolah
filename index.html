@@ -1,0 +1,317 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Absensi Mushola - SMK Swasta Prama Artha</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+
+<div class="app-container">
+
+    <!-- HEADER DENGAN FOTO MUSHOLA -->
+    <header class="main-header"
+        style="
+        background-image:
+        linear-gradient(
+            rgba(13, 83, 59, 0.55),
+            rgba(13, 83, 59, 0.90)
+        ),
+        url('assets/images/mushola.jpg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        ">
+
+        <div class="logo-box">
+            <i class="fa-solid fa-mosque icon-logo"></i>
+        </div>
+
+        <h2 class="sub-title">
+            SMK SWASTA PRAMA ARTHA
+        </h2>
+
+        <h1 class="main-title">
+            ABSENSI MUSHOLA
+        </h1>
+
+        <p class="badge-title">
+            Sistem Presensi Sholat Berjamaah & Ibadah Siswa
+        </p>
+
+    </header>
+
+
+    <!-- MENU NAVIGASI -->
+    <nav class="nav-menu">
+
+        <a href="index.html" class="nav-item active">
+            <i class="fa-solid fa-chart-pie"></i>
+            Rekap
+        </a>
+
+        <a href="form.html" class="nav-item">
+            <i class="fa-solid fa-user-check"></i>
+            Isi Absen
+        </a>
+
+        <a href="#jadwal" class="nav-item">
+            <i class="fa-solid fa-clock"></i>
+            Jadwal
+        </a>
+
+    </nav>
+
+
+    <!-- KONTEN UTAMA -->
+    <main class="main-content">
+
+
+        <!-- STATISTIK KEHADIRAN -->
+        <section class="section-block">
+
+            <div class="section-header">
+
+                <i class="fa-solid fa-clipboard-check text-primary"></i>
+
+                <div>
+                    <h3>Statistik Kehadiran Hari Ini</h3>
+                    <p class="sub-text" id="tanggalHariIni">
+                        Memuat tanggal...
+                    </p>
+                </div>
+
+            </div>
+
+
+            <!-- KARTU STATISTIK -->
+            <div class="card-grid">
+
+                <div class="card card-emerald"
+                     style="grid-column: span 2;">
+
+                    <i class="fa-solid fa-users card-icon"></i>
+
+                    <p class="card-label">
+                        TOTAL ABSENSI SISWA
+                    </p>
+
+                    <p id="totalHadir" class="card-value">
+                        0 Siswa
+                    </p>
+
+                </div>
+
+
+                <div class="card card-teal">
+
+                    <i class="fa-solid fa-sun card-icon"></i>
+
+                    <p class="card-label">
+                        SHOLAT DZUHUR
+                    </p>
+
+                    <p id="totalDzuhur" class="card-value">
+                        0 Siswa
+                    </p>
+
+                </div>
+
+
+                <div class="card card-gold">
+
+                    <i class="fa-solid fa-cloud-sun card-icon"></i>
+
+                    <p class="card-label">
+                        SHOLAT DHUHA
+                    </p>
+
+                    <p id="totalDhuha" class="card-value">
+                        0 Siswa
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- TOMBOL ABSENSI -->
+            <a href="form.html"
+               class="btn btn-primary"
+               style="
+               display: block;
+               text-align: center;
+               text-decoration: none;
+               margin-top: 14px;
+               ">
+
+                <i class="fa-solid fa-pen-to-square"></i>
+                Isi Absensi Sholat Sekarang
+
+            </a>
+
+        </section>
+
+
+
+        <!-- JADWAL SHOLAT -->
+        <section id="jadwal" class="section-block shadow-box">
+
+            <div class="form-header">
+
+                <i class="fa-solid fa-kaaba text-primary"></i>
+
+                <h3>Jadwal Sholat Sekolah</h3>
+
+            </div>
+
+
+            <div class="jadwal-list">
+
+                <div class="jadwal-item">
+
+                    <span>
+                        <i class="fa-solid fa-cloud-sun text-gold"></i>
+                        Sholat Dhuha Bersama
+                    </span>
+
+                    <span class="badge-time">
+                        07:15 WIB
+                    </span>
+
+                </div>
+
+
+                <div class="jadwal-item">
+
+                    <span>
+                        <i class="fa-solid fa-sun text-primary"></i>
+                        Sholat Dzuhur Berjamaah
+                    </span>
+
+                    <span class="badge-time">
+                        12:25 WIB
+                    </span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- DAFTAR SISWA HADIR -->
+        <section class="section-block shadow-box">
+
+            <div class="form-header"
+                 style="justify-content: space-between;">
+
+                <div style="
+                    display: flex;
+                    align-items: center;
+                    gap: 8px;
+                ">
+
+                    <i class="fa-solid fa-list-check text-primary"></i>
+
+                    <h3>Daftar Siswa Hadir</h3>
+
+                </div>
+
+            </div>
+
+
+            <!-- FILTER KELAS -->
+            <div class="input-box"
+                 style="margin-bottom: 12px;">
+
+                <select id="filterKelas">
+
+                    <option value="SEMUA">
+                        Tampilkan Semua Kelas
+                    </option>
+
+                    <option value="X RPL">X RPL</option>
+                    <option value="XI RPL">XI RPL</option>
+
+                    <option value="X AKL">X AKL</option>
+                    <option value="XI AKL">XI AKL</option>
+
+                    <option value="X TSM">X TSM</option>
+                    <option value="XI TSM">XI TSM</option>
+
+                    <option value="X MPLB">X MPLB</option>
+                    <option value="XI MPLB">XI MPLB</option>
+
+                </select>
+
+            </div>
+
+
+            <!-- TABEL ABSENSI -->
+            <div class="table-container">
+
+                <table>
+
+                    <thead>
+                        <tr>
+                            <th>Nama & Kelas</th>
+                            <th>Ibadah</th>
+                            <th class="text-right">Status</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="tabelAbsensi">
+
+                        <tr id="emptyRow">
+
+                            <td colspan="3" class="table-empty">
+                                Belum ada siswa yang mengisi absen.
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+    <!-- FOOTER -->
+    <footer class="app-footer">
+
+        <p>
+            © 2026 Pengurus Mushola Al-Ikhlas & Rohis.
+        </p>
+
+        <p class="footer-highlight">
+            SMK Swasta Prama Artha - Project Kelompok 5
+        </p>
+
+    </footer>
+
+</div>
+
+
+<!-- JAVASCRIPT -->
+<script src="js/script.js"></script>
+
+</body>
+</html>
